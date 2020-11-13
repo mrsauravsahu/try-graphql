@@ -24,4 +24,5 @@ Route.get('/', async () => {
   return { hello: 'world' }
 })
 
-Route.post('/graphql', 'GraphQLRootController.index')
+// Using Apollo Server now
+// Route.post('/graphql', 'GraphQLRootController.index')
