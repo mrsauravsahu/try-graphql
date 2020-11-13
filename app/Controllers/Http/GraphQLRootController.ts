@@ -5,6 +5,7 @@ import { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 export default class GraphQLRootController {
   public async index({ request }: HttpContextContract) {
+    // TODO: Some sort of validation?
     var graphQLQuery = request.input('query')
 
     var schema = await buildSchema({
