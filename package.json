@@ -25,8 +25,11 @@
   "dependencies": {
     "@adonisjs/core": "^5.0.4-preview-rc-2",
     "@adonisjs/repl": "^1.1.5",
+    "graphql": "^15.4.0",
     "proxy-addr": "^2.0.6",
     "reflect-metadata": "^0.1.13",
-    "source-map-support": "^0.5.19"
+    "regenerator-runtime": "^0.13.7",
+    "source-map-support": "^0.5.19",
+    "type-graphql": "^1.1.1"
   }
 }
