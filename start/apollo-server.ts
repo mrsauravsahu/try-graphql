@@ -15,10 +15,11 @@ import { MetaResolver } from 'App/GraphQL/Resolvers/MetaInfoResolver'
 import Env from '@ioc:Adonis/Core/Env'
 import Logger from '@ioc:Adonis/Core/Logger'
 import { ApolloServer } from 'apollo-server'
+import { TodosResolver } from 'App/GraphQL/Resolvers/TodosResolver'
 
 const initApolloServer = async () => {
   const schema = await buildSchema({
-    resolvers: [MetaResolver],
+    resolvers: [MetaResolver, TodosResolver],
   })
 
   const server = new ApolloServer({
