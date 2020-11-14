@@ -3,6 +3,7 @@ dependencies:
   '@adonisjs/lucid': 9.0.3_83331894349a68e9056deec8c957d645
   '@adonisjs/repl': 1.1.5_e16a4e104fed4fe243e69b69861b427e
   apollo-server: 2.19.0_graphql@15.4.0
+  class-validator: 0.12.2
   graphql: 15.4.0
   luxon: 1.25.0
   pg: 8.5.1_pg@8.5.1
@@ -10,7 +11,7 @@ dependencies:
   reflect-metadata: 0.1.13
   regenerator-runtime: 0.13.7
   source-map-support: 0.5.19
-  type-graphql: 1.1.1_graphql@15.4.0
+  type-graphql: 1.1.1_60d81cec7d8a2846c54f568d8b757f67
 devDependencies:
   '@adonisjs/assembler': 3.0.6_e16a4e104fed4fe243e69b69861b427e
   adonis-preset-ts: 1.1.0
@@ -716,6 +717,10 @@ packages:
       '@types/node': 14.14.7
     resolution:
       integrity: sha512-AfqR0fZMoUXUNwusgXKxcE9DPlHNDHQp6nKYUd4PSRpLobF5CCevSpyTEBcVZreqaWKCnGBr9KI1fHMTttoB7A==
+  /@types/validator/13.0.0:
+    dev: false
+    resolution:
+      integrity: sha512-WAy5txG7aFX8Vw3sloEKp5p/t/Xt8jD3GRD9DacnFv6Vo8ubudAsRTXgxpQwU0mpzY/H8U4db3roDuCMjShBmw==
   /@types/validator/13.1.0:
     dev: false
     resolution:
@@ -1570,6 +1575,15 @@ packages:
       node: '>=0.10.0'
     resolution:
       integrity: sha512-qOhPa/Fj7s6TY8H8esGu5QNpMMQxz79h+urzrNYN6mn+9BnxlDGf5QZ+XeCDsxSjPqsSR56XOZOJmpeurnLMeg==
+  /class-validator/0.12.2:
+    dependencies:
+      '@types/validator': 13.0.0
+      google-libphonenumber: 3.2.15
+      tslib: 2.0.3
+      validator: 13.0.0
+    dev: false
+    resolution:
+      integrity: sha512-TDzPzp8BmpsbPhQpccB3jMUE/3pK0TyqamrK0kcx+ZeFytMA+O6q87JZZGObHHnoo9GM8vl/JppIyKWeEA/EVw==
   /clean-stack/2.2.0:
     dev: true
     engines:
@@ -2680,6 +2694,12 @@ packages:
       node: '>=6'
     resolution:
       integrity: sha512-ollPHROa5mcxDEkwg6bPt3QbEf4pDQSNtd6JPL1YvOvAo/7/0VAm9TccUeoTmarjPw4pfUthSCqcyfNB1I3ZSg==
+  /google-libphonenumber/3.2.15:
+    dev: false
+    engines:
+      node: '>=0.10'
+    resolution:
+      integrity: sha512-tbCIuzMoH34RdrbFRw5kijAZn/p6JMQvsgtr1glg2ugbwqrMPlOL8pHNK8cyGo9B6SXpcMm4hdyDqwomR+HPRg==
   /graceful-fs/4.2.4:
     resolution:
       integrity: sha512-WjKPNJF79dtJAVniUlGGWHYGz2jWxT6VhN/4m1NdkbZ2nOsEF+cI1Edgql5zCRhs/VsQYRvrXctxktVXZUkixw==
@@ -5037,11 +5057,12 @@ packages:
       node: '>=8'
     resolution:
       integrity: sha512-4dbzIzqvjtgiM5rw1k5rEHtBANKmdudhGyBEajN01fEyhaAIhsoKNy6y7+IN93IfpFtwY9iqi7kD+xwKhQsNJA==
-  /type-graphql/1.1.1_graphql@15.4.0:
+  /type-graphql/1.1.1_60d81cec7d8a2846c54f568d8b757f67:
     dependencies:
       '@types/glob': 7.1.3
       '@types/node': 14.14.7
       '@types/semver': 7.3.4
+      class-validator: 0.12.2
       glob: 7.1.6
       graphql: 15.4.0
       graphql-query-complexity: 0.7.1_graphql@15.4.0
@@ -5194,6 +5215,12 @@ packages:
     dev: true
     resolution:
       integrity: sha1-X6kS2B630MdK/BQN5zF/DKffQ34=
+  /validator/13.0.0:
+    dev: false
+    engines:
+      node: '>= 0.10'
+    resolution:
+      integrity: sha512-anYx5fURbgF04lQV18nEQWZ/3wHGnxiKdG4aL8J+jEDsm98n/sU/bey+tYk6tnGJzm7ioh5FoqrAiQ6m03IgaA==
   /validator/13.1.17:
     engines:
       node: '>= 0.10'
@@ -5338,6 +5365,7 @@ specifiers:
   '@adonisjs/repl': ^1.1.5
   adonis-preset-ts: ^1.1.0
   apollo-server: ^2.19.0
+  class-validator: ^0.12.2
   eslint: ^7.13.0
   eslint-config-prettier: ^6.15.0
   eslint-plugin-adonis: ^1.0.15

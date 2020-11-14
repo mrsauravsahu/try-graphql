@@ -27,6 +27,7 @@
     "@adonisjs/lucid": "^9.0.3",
     "@adonisjs/repl": "^1.1.5",
     "apollo-server": "^2.19.0",
+    "class-validator": "^0.12.2",
     "graphql": "^15.4.0",
     "luxon": "^1.25.0",
     "pg": "^8.5.1",
