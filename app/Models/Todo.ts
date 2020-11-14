@@ -1,7 +1,6 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 import { ObjectType, Field } from 'type-graphql'
-
 @ObjectType()
 export default class Todo extends BaseModel {
   @Field()
@@ -20,18 +19,16 @@ export default class Todo extends BaseModel {
   @column()
   public isComplete: boolean = false
 
-  @Field((_) => String)
+  @Field()
   @column.dateTime({
     autoCreate: true,
-    serialize: (value: DateTime) => value.toISOTime()
   })
   public createdAt: DateTime
 
-  @Field((_) => String)
+  @Field()
   @column.dateTime({
     autoCreate: true,
     autoUpdate: true,
-    serialize: (value: DateTime) => value.toISOTime()
   })
   public updatedAt: DateTime
 }
