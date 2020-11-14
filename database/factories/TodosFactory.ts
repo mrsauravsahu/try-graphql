@@ -4,7 +4,6 @@ import { DateTime } from 'luxon'
 
 export const TodosFactory = Factory.define(Todo, ({ faker }) => {
   return {
-    id: faker.random.uuid(),
     title: faker.lorem.words(3),
     description: faker.lorem.words(5),
     isComplete: faker.random.boolean(),

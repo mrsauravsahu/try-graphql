@@ -1,17 +1,18 @@
 import { DateTime } from 'luxon'
 import { BaseModel, column } from '@ioc:Adonis/Lucid/Orm'
 import { ObjectType, Field } from 'type-graphql'
+import { v4 as uuid } from 'uuid'
 @ObjectType()
 export default class Todo extends BaseModel {
   @Field()
   @column({ isPrimary: true })
-  public id: string
+  public id: string = uuid()
 
   @Field()
   @column()
   public title: string
 
-  @Field()
+  @Field({ nullable: true })
   @column()
   public description?: string
 
