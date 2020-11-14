@@ -1,6 +1,11 @@
 {
   "typescript": true,
-  "commands": ["./commands", "@adonisjs/core/build/commands", "@adonisjs/repl/build/commands"],
+  "commands": [
+    "./commands",
+    "@adonisjs/core/build/commands",
+    "@adonisjs/repl/build/commands",
+    "@adonisjs/lucid/build/commands"
+  ],
   "exceptionHandlerNamespace": "App/Exceptions/Handler",
   "aliases": {
     "App": "app",
@@ -13,9 +18,17 @@
     "./start/kernel",
     {
       "file": "./start/apollo-server",
-      "environment": ["web"]
+      "environment": [
+        "web"
+      ]
     }
   ],
-  "providers": ["./providers/AppProvider", "@adonisjs/core"],
-  "aceProviders": ["@adonisjs/repl"]
+  "providers": [
+    "./providers/AppProvider",
+    "@adonisjs/core",
+    "@adonisjs/lucid"
+  ],
+  "aceProviders": [
+    "@adonisjs/repl"
+  ]
 }
