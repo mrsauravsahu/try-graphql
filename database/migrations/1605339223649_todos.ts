@@ -9,7 +9,7 @@ export default class Todos extends BaseSchema {
       table.timestamps(true)
       table.string('title')
       table.string('description')
-      table.boolean('isComplete')
+      table.boolean('is_complete')
     })
   }
 
