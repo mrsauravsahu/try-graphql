@@ -28,6 +28,8 @@
     "@adonisjs/repl": "^1.1.5",
     "apollo-server": "^2.19.0",
     "graphql": "^15.4.0",
+    "luxon": "^1.25.0",
+    "mysql": "^2.18.1",
     "proxy-addr": "^2.0.6",
     "reflect-metadata": "^0.1.13",
     "regenerator-runtime": "^0.13.7",
